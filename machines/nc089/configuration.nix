@@ -8,6 +8,7 @@
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
+      ../../modules/sway.nix
     ];
 
   # must use unfree due to wireless drive
@@ -19,13 +20,6 @@
 
   networking.hostName = "nc089"; # Define your hostname.
   networking.networkmanager.enable = true;
-
-  # The global useDHCP flag is deprecated, therefore explicitly set to false here.
-  # Per-interface useDHCP will be mandatory in the future, so this generated config
-  # replicates the default behaviour.
-  networking.useDHCP = false;
-  networking.interfaces.enp0s31f6.useDHCP = true;
-  networking.interfaces.enp11s0.useDHCP = true;
 
   # Select internationalisation properties.
   i18n.defaultLocale = "en_US.UTF-8";
@@ -40,14 +34,11 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
-    neovim git tmux firefox alacritty
+    neovim git tmux firefox-wayland alacritty
   ];
 
   # Enable sound.
   hardware.pulseaudio.enable = true;
-
-  # Window manager
-  programs.sway.enable = true;
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.timmy = {
