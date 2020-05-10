@@ -34,7 +34,7 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
-    neovim git tmux firefox-wayland alacritty
+    neovim git tmux firefox alacritty xdg_utils
   ];
 
   # Enable sound.
