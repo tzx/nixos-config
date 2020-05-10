@@ -9,6 +9,7 @@
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
       ../../modules/sway.nix
+      ../../modules/fonts.nix
     ];
 
   # must use unfree due to wireless drive
