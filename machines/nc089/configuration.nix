@@ -9,7 +9,7 @@
     [ # Include the results of the hardware scan.
       <home-manager/nixos>
       ./hardware-configuration.nix
-      ../../modules/fonts.nix
+      ../../modules/system/fonts.nix
     ];
 
   # must use unfree due to wireless drive
@@ -49,7 +49,7 @@
   };
 
   home-manager.users.timmy = { pkgs, ... }: {
-    imports = [ ../../modules/sway.nix ];
+    imports = [ ../../modules/home/sway.nix ];
     programs.git = {
       enable = true;
       userName = "Timmy Xiao";
