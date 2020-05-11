@@ -9,7 +9,6 @@
     [ # Include the results of the hardware scan.
       <home-manager/nixos>
       ./hardware-configuration.nix
-      ../../modules/sway.nix
       ../../modules/fonts.nix
     ];
 
@@ -50,6 +49,7 @@
   };
 
   home-manager.users.timmy = { pkgs, ... }: {
+    imports = [ ../../modules/sway.nix ];
     programs.git = {
       enable = true;
       userName = "Timmy Xiao";
