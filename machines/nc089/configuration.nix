@@ -39,7 +39,7 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
-    neovim git tmux firefox alacritty xdg_utils
+    neovim git tmux firefox xdg_utils
   ];
 
   # Enable sound.
@@ -53,7 +53,11 @@
   };
 
   home-manager.users.timmy = { pkgs, ... }: {
-    imports = [ ../../modules/home/sway.nix ];
+    imports = 
+      [ 
+        ../../modules/home/sway.nix 
+	../../modules/home/alacritty.nix
+      ];
     programs.git = {
       enable = true;
       userName = "Timmy Xiao";
