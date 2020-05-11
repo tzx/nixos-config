@@ -7,6 +7,7 @@
 {
   imports =
     [ # Include the results of the hardware scan.
+      <home-manager/nixos>
       ./hardware-configuration.nix
       ../../modules/sway.nix
       ../../modules/fonts.nix
@@ -46,6 +47,14 @@
     isNormalUser = true;
     home = "/home/timmy";
     extraGroups = [ "wheel" "networkmanager" ]; # Enable ‘sudo’ for the user.
+  };
+
+  home-manager.users.timmy = { pkgs, ... }: {
+    programs.git = {
+      enable = true;
+      userName = "Timmy Xiao";
+      userEmail = "timmyxiao1@gmail.com";
+    };
   };
 
   # This value determines the NixOS release from which the default
