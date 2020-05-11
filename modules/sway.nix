@@ -6,6 +6,12 @@
   wayland.windowManager.sway = {
     enable = true;
     extraSessionCommands = "export MOZ_ENABLE_WAYLAND=1";
+
+    config = {
+      modifier = "Mod4";
+      terminal = "${pkgs.alacritty}/bin/alacritty";
+      menu = "${pkgs.wofi}/bin/wofi --show run";
+    };
   };
 }
 
