@@ -10,7 +10,11 @@
       <home-manager/nixos>
       ./hardware-configuration.nix
       ../../modules/system/fonts.nix
+      ../../modules/system/kernel.nix
     ];
+
+  # Used to enable xsession/wayland
+  hardware.opengl.enable = true;
 
   # must use unfree due to wireless drive
   nixpkgs.config.allowUnfree = true;
