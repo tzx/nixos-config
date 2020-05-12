@@ -19,6 +19,10 @@
   # Used to enable GTK for ca.desrt.dconf
   services.dbus.packages = with pkgs; [ gnome3.dconf ];
 
+  # Used for PAM unlocking swaylock
+  # Should be used for other services
+  security.pam.services.swaylock = {};
+
   # must use unfree due to wireless drive
   nixpkgs.config.allowUnfree = true;
 

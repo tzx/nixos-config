@@ -41,4 +41,8 @@ hardware.opengl.enable = true;
 
 # Used to enable GTK for ca.desrt.dconf
 services.dbus.packages = with pkgs; [ gnome3.dconf ];
+
+# Used for PAM unlocking swaylock
+# PAM should be enabled for other services if needed
+security.pam.services.swaylock = {};
 ```
