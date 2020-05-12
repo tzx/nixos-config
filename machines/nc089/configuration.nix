@@ -16,6 +16,9 @@
   # Used to enable xsession/wayland
   hardware.opengl.enable = true;
 
+  # Used to enable GTK for ca.desrt.dconf
+  services.dbus.packages = with pkgs; [ gnome3.dconf ];
+
   # must use unfree due to wireless drive
   nixpkgs.config.allowUnfree = true;
 
@@ -57,6 +60,7 @@
       [ 
         ../../modules/home/sway.nix 
 	../../modules/home/alacritty.nix
+	../../modules/home/gtk.nix
       ];
     programs.git = {
       enable = true;
