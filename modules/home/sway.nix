@@ -23,39 +23,37 @@
   programs.wofi.enable = true;
   programs.wofi.css = ''
     window {
-    margin: 5px;
-    border: 2px solid red;
-    background-color: red;
+    border: 1px solid #81a2be;
+    background-color: #81a2be;
     }
-
+    
     #input {
     margin: 5px;
-    border: 2px solid blue;
-    background-color: blue;
+    border: 1px solid #1d1f21;
+    background-color: #c5c8c6;
     }
-
+    
     #inner-box {
     margin: 5px;
-    border: 2px solid yellow;
-    background-color: yellow;
+    border: 2px solid #1d1f21;
+    background-color: #1d1f21;
     }
-
+    
     #outer-box {
     margin: 5px;
-    border: 2px solid green;
-    background-color: green;
+    border: 2px solid #1d1f21;
+    background-color: #1d1f21;
     }
-
+    
     #scroll {
     margin: 5px;
-    border: 2px solid orange;
-    background-color: orange;
+    border: 2px solid #1d1f21;
+    background-color: #1d1f21;
     }
-
+    
     #text {
     margin: 5px;
-    border: 2px solid cyan;
-    background-color: cyan;
-    }
+    color: #f0c674;
+    } 
   '';
 }
