@@ -59,8 +59,10 @@
     imports = 
       [ 
         ../../modules/home/sway.nix 
-	../../modules/home/alacritty.nix
-	../../modules/home/gtk.nix
+        ../../modules/home/alacritty.nix
+        ../../modules/home/gtk.nix
+        ../../modules/home/zathura.nix
+        ../../modules/home/neovim
       ];
     programs.git = {
       enable = true;
