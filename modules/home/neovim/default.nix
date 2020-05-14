@@ -18,9 +18,10 @@
       set expandtab
       set shiftwidth=4
       set tabstop=4
-      set si
+      set smartindent
       set cursorline
       set undofile
+      set wildmode=longest:full,full
 
       let base16colorspace=256
       colorscheme base16-tomorrow-night
