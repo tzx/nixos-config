@@ -11,6 +11,7 @@
       ./hardware-configuration.nix
       ../../modules/system/fonts.nix
       ../../modules/system/kernel.nix
+      ../../modules/system/bitlbee.nix
     ];
 
   # Used to enable xsession/wayland
@@ -67,6 +68,7 @@
         ../../modules/home/gtk.nix
         ../../modules/home/zathura.nix
         ../../modules/home/neovim
+        ../../modules/home/custom/weechat.nix
       ];
     programs.git = {
       enable = true;
