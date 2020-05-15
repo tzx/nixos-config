@@ -57,7 +57,7 @@
   users.users.timmy = {
     isNormalUser = true;
     home = "/home/timmy";
-    extraGroups = [ "wheel" "networkmanager" ]; # Enable ‘sudo’ for the user.
+    extraGroups = [ "wheel" "networkmanager" "bitlbee" ]; # Enable ‘sudo’ for the user.
   };
 
   home-manager.users.timmy = { pkgs, ... }: {
