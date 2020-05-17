@@ -14,7 +14,7 @@
     fontconfig = {
       defaultFonts = {
         emoji = [ "Noto Color Emoji" ];
-        monospace =  [ "Input Mono" ];
+        monospace =  [ "Input Mono" "Noto Color Emoji" ];
         serif = [ "Noto Serif" ]; 
         sansSerif = [ "Lato" ];
       };

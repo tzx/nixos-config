@@ -5,15 +5,15 @@
   programs.alacritty.settings = {
     font = {
       normal = {
-        family = "Input Mono";
+        family = "monospace";
 	style = "Regular";
       };
       bold = {
-        family = "Input Mono";
+        family = "monospace";
 	style = "Bold";
       };
       italic = {
-        family = "Input Mono";
+        family = "monospace";
 	style = "Italic";
       };
     };
