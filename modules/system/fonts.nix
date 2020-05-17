@@ -3,8 +3,6 @@
 {
 
   fonts = {
-    enableDefaultFonts = true; 
-
     fonts = with pkgs; [
       noto-fonts
       noto-fonts-cjk
@@ -16,9 +14,9 @@
     fontconfig = {
       defaultFonts = {
         emoji = [ "Noto Color Emoji" ];
-	monospace =  [ "Input Mono" ];
-	serif = [ "Noto Serif" ]; 
-	sansSerif = [ "Noto Sans" ];
+        monospace =  [ "Input Mono" ];
+        serif = [ "Noto Serif" ]; 
+        sansSerif = [ "Lato" ];
       };
     };
   };
