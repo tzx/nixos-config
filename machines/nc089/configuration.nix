@@ -58,6 +58,7 @@
     isNormalUser = true;
     home = "/home/timmy";
     extraGroups = [ "wheel" "networkmanager" "bitlbee" ]; # Enable ‘sudo’ for the user.
+    shell = pkgs.zsh;
   };
 
   home-manager.users.timmy = { pkgs, ... }: {
@@ -68,6 +69,7 @@
         ../../modules/home/gtk.nix
         ../../modules/home/zathura.nix
         ../../modules/home/neovim
+        ../../modules/home/zsh.nix
         ../../modules/home/custom/weechat.nix
       ];
     programs.git = {
