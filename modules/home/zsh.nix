@@ -1,9 +1,14 @@
 { pkgs, ... }:
 
 {
+  programs.direnv.enable = true;
   programs.zsh = {
     enable = true;
     history.extended = true;
+    dotDir = ".config/zsh";
+    shellAliases = {
+      ls = "exa"
+    }
 
     plugins = 
       [
