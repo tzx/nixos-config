@@ -68,6 +68,7 @@
         ../../modules/home/alacritty.nix
         ../../modules/home/gtk.nix
         ../../modules/home/zathura.nix
+        ../../modules/home/rustcli.nix
         ../../modules/home/neovim
         ../../modules/home/zsh.nix
         ../../modules/home/custom/weechat.nix
