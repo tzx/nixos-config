@@ -7,8 +7,8 @@
     history.extended = true;
     dotDir = ".config/zsh";
     shellAliases = {
-      ls = "exa"
-    }
+      ls = "exa";
+    };
 
     plugins = 
       [
