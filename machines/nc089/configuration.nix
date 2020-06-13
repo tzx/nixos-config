@@ -12,6 +12,7 @@
       ../../modules/system/fonts.nix
       ../../modules/system/kernel.nix
       ../../modules/system/bitlbee.nix
+      ../../modules/system/steam.nix
     ];
 
   # Used to enable xsession/wayland
@@ -47,7 +48,7 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
-    neovim git tmux firefox xdg_utils
+    neovim git tmux firefox xdg_utils steam
   ];
 
   # Enable sound.
