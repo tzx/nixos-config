@@ -13,6 +13,7 @@
       ../../modules/system/kernel.nix
       ../../modules/system/bitlbee.nix
       ../../modules/system/steam.nix
+      ../../modules/system/yubikey.nix
     ];
 
   # Used to enable xsession/wayland
