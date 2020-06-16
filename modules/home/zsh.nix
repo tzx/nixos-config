@@ -1,5 +1,18 @@
-{ pkgs, ... }:
+isBeehive : { pkgs, ... }:
 
+let sourceNixShell = ''
+      if [ -e ~/.nix-profile/etc/profile.d/nix.sh ]; then
+        . ~/.nix-profile/etc/profile.d/nix.sh;
+        export NIX_PATH=$HOME/.nix-defexpr/channels''${NIX_PATH:+:}$NIX_PATH
+      fi # added by Nix installer
+    '';
+
+    useNVM = ''
+      export NVM_DIR="$HOME/.nvm"
+      [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+      [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+    ''
+in
 {
   programs.direnv.enable = true;
   programs.zsh = {
@@ -33,5 +46,8 @@
           };
         }
       ];
+      initExtra = if (isBeehive)
+                  then (sourceNixShell + useNVM)
+                  else sourceNixShell;
   };
 }
