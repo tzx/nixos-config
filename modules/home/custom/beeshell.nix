@@ -46,6 +46,6 @@ in
           };
         }
       ];
-      initExtra = sourceNixShell;
+      initExtra = sourceNixShell + useNVM;
   };
 }
