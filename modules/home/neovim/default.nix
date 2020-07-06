@@ -9,6 +9,7 @@
       [
         lightline-vim
         base16-vim
+        gruvbox
         coc-nvim
         vim-latex-live-preview
       ];
@@ -23,8 +24,7 @@
       set undofile
       set wildmode=longest:full,full
 
-      let base16colorspace=256
-      colorscheme base16-tomorrow-night
+      autocmd vimenter * colorscheme gruvbox
 
       let g:livepreview_previewer = 'zathura'
 

@@ -1,6 +1,4 @@
 {
-  programs.alacritty.enable = true;
-
   # YAML can read JSON, which the attribute set converts to
   programs.alacritty.settings = {
     font = {
