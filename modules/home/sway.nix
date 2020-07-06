@@ -29,6 +29,9 @@
   xdg.configFile."sway/status.toml".text = 
     ''
       [[block]]
+      block = "networkmanager"
+
+      [[block]]
       block = "disk_space"
       path = "/"
       alias = "/"
